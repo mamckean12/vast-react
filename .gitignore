@@ -7,7 +7,7 @@ yarn.lock
 /coverage
 
 # production
-# /build
+/build
 
 # Visual Studio Code
 .vscode/*
