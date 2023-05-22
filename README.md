@@ -1,6 +1,6 @@
 # VAST - React
 
-TBD
+Creatd by Matt McKean, Ashlyn Consulting Group LLC
 
 # CoreUI - Version Used In Vast-React
 

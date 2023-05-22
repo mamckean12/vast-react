@@ -1,13 +1,19 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler } from '@coreui/react'
-import CIcon from '@coreui/icons-react'
+// added line below by matt mckean
+import { NavLink } from 'react-router-dom'
+// added CNavLink below by matt mckean
+import { CSidebar, CSidebarBrand, CSidebarNav, CSidebarToggler, CNavLink } from '@coreui/react'
+// import CIcon from '@coreui/icons-react'
 
 import { AppSidebarNav } from './AppSidebarNav'
 
-import { logoNegative } from 'src/assets/brand/logo-negative'
-import { sygnet } from 'src/assets/brand/sygnet'
+// import { logoNegative } from 'src/assets/brand/logo-negative'
+// import { sygnet } from 'src/assets/brand/sygnet'
+// added by matt mckean
+// import { cylogoNegative } from '../assets/brand/cy-logo-negative'
+// end added
 
 import SimpleBar from 'simplebar-react'
 import 'simplebar/dist/simplebar.min.css'
@@ -29,9 +35,19 @@ const AppSidebar = () => {
         dispatch({ type: 'set', sidebarShow: visible })
       }}
     >
-      <CSidebarBrand className="d-none d-md-flex" to="/">
+      {/* uncomment below line (original coreui code) when using logos */}
+      {/* <CSidebarBrand className="d-none d-md-flex" to="/"> */}
+      <CSidebarBrand className="d-block d-md-flex p-2" to="/">
+        {/* added by matt mckean */}
+        <CNavLink to="/dashboard" component={NavLink}>
+          * Insert Cyvergence Logo *
+        </CNavLink>
+        {/* end added */}
+        {/* 
+        <CIcon className="sidebar-brand-full" icon={cylogoNegative} height={35} />
         <CIcon className="sidebar-brand-full" icon={logoNegative} height={35} />
         <CIcon className="sidebar-brand-narrow" icon={sygnet} height={35} />
+        */}
       </CSidebarBrand>
       <CSidebarNav>
         <SimpleBar>
