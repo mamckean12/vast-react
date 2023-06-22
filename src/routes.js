@@ -34,7 +34,6 @@ const Layout = React.lazy(() => import('./views/forms/layout/Layout'))
 const Range = React.lazy(() => import('./views/forms/range/Range'))
 const Select = React.lazy(() => import('./views/forms/select/Select'))
 const Validation = React.lazy(() => import('./views/forms/validation/Validation'))
-
 const Charts = React.lazy(() => import('./views/charts/Charts'))
 
 // Icons
@@ -47,8 +46,17 @@ const Alerts = React.lazy(() => import('./views/notifications/alerts/Alerts'))
 const Badges = React.lazy(() => import('./views/notifications/badges/Badges'))
 const Modals = React.lazy(() => import('./views/notifications/modals/Modals'))
 const Toasts = React.lazy(() => import('./views/notifications/toasts/Toasts'))
-
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
+
+// added by matt mckean
+// Vast prototype
+const Index = React.lazy(() => import('./views/vast/index/Index'))
+const Page1 = React.lazy(() => import('./views/vast/page1/Page1'))
+const Page2 = React.lazy(() => import('./views/vast/page2/Page2'))
+// Mitre
+const Navigator = React.lazy(() => import('./views/mitre/navigator/Navigator'))
+// Experiments (delete + references in routes below)
+const Workflow = React.lazy(() => import('./views/experimental/workflow/Workflow'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -95,6 +103,14 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
+  { path: '/vast', name: 'Vast', element: Index, exact: true },
+  { path: '/vast/index', name: 'Index', element: Index },
+  { path: '/vast/page1', name: 'Page1', element: Page1 },
+  { path: '/vast/page2', name: 'Page2', element: Page2 },
+  { path: '/mitre', name: 'Mitre', element: Navigator, exact: true },
+  { path: '/mitre/navigator', name: 'Navigator', element: Navigator },
+  { path: '/experimental', name: 'Experimental', element: Workflow, exact: true },
+  { path: '/experimental/workflow', name: 'Workflow', element: Workflow },
 ]
 
 export default routes

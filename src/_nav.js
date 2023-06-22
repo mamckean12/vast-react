@@ -27,22 +27,37 @@ const _nav = [
     name: '',
   },
   {
-    component: CNavItem,
-    name: 'Vast Dashboard',
-    to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
-  },
-  {
     component: CNavTitle,
-    name: 'Welcome to the Vast-React Playground...',
+    name: 'Welcome to the React Playground for Vast...',
   },
   {
     component: CNavGroup,
-    name: 'Styles',
+    name: 'Vast Prototype',
+    to: '/vast',
+    items: [
+      {
+        component: CNavItem,
+        name: 'Index',
+        to: '/vast/index',
+        icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Page1',
+        to: '/vast/page1',
+        icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Page2',
+        to: '/vast/page2',
+        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Theme',
     to: '/theme',
     items: [
       {
@@ -452,6 +467,64 @@ const _nav = [
         icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
       },
     ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Mitre',
+    items: [
+      {
+        component: CNavItem,
+        name: 'Att&ck',
+        href: 'https://attack.mitre.org/',
+        icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Navigator',
+        to: '/mitre/navigator',
+        icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Att&ck Flow',
+        href: 'https://center-for-threat-informed-defense.github.io/attack-flow/developers/',
+        icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Experimental',
+    items: [
+      {
+        component: CNavItem,
+        name: 'TBD',
+        to: '/',
+        icon: <CIcon icon={cilDescription} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Workflow',
+        href: '/experimental/workflow',
+        icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'TBD',
+        href: '/',
+        icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+      },
+    ],
+  },
+  {
+    component: CNavItem,
+    name: 'Dashboard',
+    to: '/dashboard',
+    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+      text: 'NEW',
+    },
   },
 ]
 
