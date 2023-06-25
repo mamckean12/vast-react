@@ -4,31 +4,34 @@ import {
   cilBell,
   cilCalculator,
   cilChartPie,
+  cilCheckCircle,
   cilCloud,
   cilCursor,
   cilDescription,
   cilDrop,
+  cilGraph,
   cilInput,
+  cilList,
   cilNotes,
   cilPencil,
   cilPuzzle,
+  cilSearch,
   cilSpeedometer,
   cilStar,
+  cilWeightlifitng,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
 const _nav = [
   {
     component: CNavItem,
-    name: '',
-  },
-  {
-    component: CNavItem,
-    name: '',
-  },
-  {
-    component: CNavTitle,
-    name: 'Welcome to the React Playground for Vast...',
+    name: 'Vast Playground',
+    to: '/vast/dashboard',
+    icon: <CIcon icon={cilWeightlifitng} customClassName="nav-icon" />,
+    badge: {
+      color: 'info',
+      text: 'NEW',
+    },
   },
   {
     component: CNavGroup,
@@ -37,21 +40,33 @@ const _nav = [
     items: [
       {
         component: CNavItem,
-        name: 'Index',
-        to: '/vast/index',
-        icon: <CIcon icon={cilDrop} customClassName="nav-icon" />,
+        name: 'Security Posture',
+        to: '/vast/dashboard',
+        icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
-        name: 'Page1',
-        to: '/vast/page1',
-        icon: <CIcon icon={cilPencil} customClassName="nav-icon" />,
+        name: 'Research',
+        to: '/vast/research',
+        icon: <CIcon icon={cilSearch} customClassName="nav-icon" />,
       },
       {
         component: CNavItem,
-        name: 'Page2',
-        to: '/vast/page2',
-        icon: <CIcon icon={cilPuzzle} customClassName="nav-icon" />,
+        name: 'Analyze',
+        to: '/vast/analyze',
+        icon: <CIcon icon={cilGraph} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Plan',
+        to: '/vast/plan',
+        icon: <CIcon icon={cilList} customClassName="nav-icon" />,
+      },
+      {
+        component: CNavItem,
+        name: 'Act',
+        to: '/vast/act',
+        icon: <CIcon icon={cilCheckCircle} customClassName="nav-icon" />,
       },
     ],
   },
@@ -515,16 +530,6 @@ const _nav = [
         icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
       },
     ],
-  },
-  {
-    component: CNavItem,
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon icon={cilSpeedometer} customClassName="nav-icon" />,
-    badge: {
-      color: 'info',
-      text: 'NEW',
-    },
   },
 ]
 

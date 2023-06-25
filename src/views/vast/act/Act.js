@@ -23,7 +23,38 @@ import {
   CRow,
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import { cilStar, cilFeaturedPlaylist, cilHistory, cilPlus, cilPencil, cilShare, cilTrash, cilCloudUpload, cilChatBubble, cilCommentBubble, cilUser, cilBorderAll, cilBrightness, cilChevronRight, cilChevronDoubleRight, cilApplications, cilAperture, cilContact, cilFont, cilTerminal, cilBlur, cilBolt, cilAudio, cilCast, cibBootstrap, cibMicrosoft, cibAdobeAcrobatReader, cibAsana, cilCode, cilQrCode } from '@coreui/icons'
+import {
+  cilStar,
+  cilFeaturedPlaylist,
+  cilHistory,
+  cilPlus,
+  cilPencil,
+  cilShare,
+  cilTrash,
+  cilCloudUpload,
+  cilChatBubble,
+  cilCommentBubble,
+  cilUser,
+  cilBorderAll,
+  cilBrightness,
+  cilChevronRight,
+  cilChevronDoubleRight,
+  cilApplications,
+  cilAperture,
+  cilContact,
+  cilFont,
+  cilTerminal,
+  cilBlur,
+  cilBolt,
+  cilAudio,
+  cilCast,
+  cibBootstrap,
+  cibMicrosoft,
+  cibAdobeAcrobatReader,
+  cibAsana,
+  cilCode,
+  cilQrCode,
+} from '@coreui/icons'
 import { DocsExample } from 'src/components'
 
 import ReactImg from 'src/assets/images/react.jpg'

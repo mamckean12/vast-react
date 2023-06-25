@@ -1,6 +1,5 @@
 import React from 'react'
 
-const Dashboard = React.lazy(() => import('./views/dashboard/Dashboard'))
 const Colors = React.lazy(() => import('./views/theme/colors/Colors'))
 const Typography = React.lazy(() => import('./views/theme/typography/Typography'))
 
@@ -50,9 +49,11 @@ const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 // added by matt mckean
 // Vast prototype
-const Index = React.lazy(() => import('./views/vast/index/Index'))
-const Page1 = React.lazy(() => import('./views/vast/page1/Page1'))
-const Page2 = React.lazy(() => import('./views/vast/page2/Page2'))
+const Dashboard = React.lazy(() => import('./views/vast/dashboard/Dashboard'))
+const Research = React.lazy(() => import('./views/vast/research/Research'))
+const Analyze = React.lazy(() => import('./views/vast/analyze/Analyze'))
+const Plan = React.lazy(() => import('./views/vast/plan/Plan'))
+const Act = React.lazy(() => import('./views/vast/act/Act'))
 // Mitre
 const Navigator = React.lazy(() => import('./views/mitre/navigator/Navigator'))
 // Experiments (delete + references in routes below)
@@ -60,7 +61,6 @@ const Workflow = React.lazy(() => import('./views/experimental/workflow/Workflow
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
-  { path: '/dashboard', name: 'Dashboard', element: Dashboard },
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', element: Colors },
   { path: '/theme/typography', name: 'Typography', element: Typography },
@@ -103,10 +103,12 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', element: Modals },
   { path: '/notifications/toasts', name: 'Toasts', element: Toasts },
   { path: '/widgets', name: 'Widgets', element: Widgets },
-  { path: '/vast', name: 'Vast', element: Index, exact: true },
-  { path: '/vast/index', name: 'Index', element: Index },
-  { path: '/vast/page1', name: 'Page1', element: Page1 },
-  { path: '/vast/page2', name: 'Page2', element: Page2 },
+  { path: '/vast', name: 'Vast', element: Dashboard, exact: true },
+  { path: '/vast/dashboard', name: 'Dashboard', element: Dashboard },
+  { path: '/vast/research', name: 'Research', element: Research },
+  { path: '/vast/analyze', name: 'Analyze', element: Analyze },
+  { path: '/vast/plan', name: 'Plan', element: Plan },
+  { path: '/vast/act', name: 'Act', element: Act },
   { path: '/mitre', name: 'Mitre', element: Navigator, exact: true },
   { path: '/mitre/navigator', name: 'Navigator', element: Navigator },
   { path: '/experimental', name: 'Experimental', element: Workflow, exact: true },
